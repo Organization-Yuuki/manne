@@ -44,7 +44,8 @@ module.exports = {
       {
         allowAsStatement: true
       },
-    ]
+    ],
+    'react/no-unknown-property': ['error', { ignore: ['css'] }]
   },
   settings: {
     'import/resolver': {
@@ -52,6 +53,9 @@ module.exports = {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx']
       },
-    }
+    },
+    react: {
+      version: 'detect',
+    },
   },
 }
