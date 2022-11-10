@@ -11,11 +11,11 @@ const App: FC = () => {
       <div style={{ padding: '10px' }}>
         <div className="App">Hello manne!!!!!</div>
         <br />
-        <SocialButton type="google" />
+        <SocialButton soType="google" />
         <br />
-        <SocialButton type="facebook" />
+        <SocialButton soType="facebook" />
         <br />
-        <SocialButton type="apple" />
+        <SocialButton soType="apple" />
       </div>
     </ErrorBoundary>
   )

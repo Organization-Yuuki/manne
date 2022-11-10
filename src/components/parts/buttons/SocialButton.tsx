@@ -1,13 +1,15 @@
 import clsx from 'clsx'
-import { FC } from 'react'
+import { ButtonHTMLAttributes, FC, forwardRef, memo } from 'react'
 import { BsFacebook, BsApple } from 'react-icons/bs'
 import { FcGoogle } from 'react-icons/fc'
 
 import { SocialTypes } from '../../../@types'
 import { commonButtonStyle } from '../../../styles/buttons/common'
+import { Spinner } from '../loadings/Spinner'
 
-interface Props {
-  type: SocialTypes
+interface SocialButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  soType: SocialTypes
+  isLoading?: boolean
 }
 
 const SocialMap = {
@@ -25,14 +27,28 @@ const SocialMap = {
   },
 }
 
-export const SocialButton: FC<Props> = ({ type }) => {
+const BeforeMemoSocialButton: FC<SocialButtonProps> = forwardRef<
+  HTMLButtonElement,
+  SocialButtonProps
+>(({ soType, className = '', isLoading = false, ...props }, ref) => {
   return (
     <button
-      css={[commonButtonStyle({ soType: type })]}
-      className={clsx('so-btn', `so-btn_${type}`)}
+      ref={ref}
+      css={[commonButtonStyle({ soType })]}
+      className={clsx('so-btn', `so-btn_${soType}`, className)}
+      {...props}
     >
-      {SocialMap[type].icon}
-      <span>{SocialMap[type].msg}</span>
+      {isLoading && <Spinner />}
+      {!isLoading && (
+        <>
+          {SocialMap[soType].icon}
+          <span>{SocialMap[soType].msg}</span>
+        </>
+      )}
     </button>
   )
-}
+})
+
+BeforeMemoSocialButton.displayName = 'SocialButton'
+
+export const SocialButton = memo(BeforeMemoSocialButton)
