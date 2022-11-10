@@ -1,22 +1,12 @@
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
 import emotionReset from 'emotion-reset'
 import { Global, css } from '@emotion/react'
 
 import App from './App'
-import { ErrorPage } from './components/errors/ErrorPage'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <ErrorPage />,
-  },
-])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  // <React.StrictMode>
   <RecoilRoot>
     <Global
       styles={css`
@@ -30,7 +20,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         }
       `}
     />
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </RecoilRoot>
-  // </React.StrictMode>
 )
