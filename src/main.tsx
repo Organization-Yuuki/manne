@@ -1,27 +1,18 @@
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
-import emotionReset from 'emotion-reset'
-import { Global, css } from '@emotion/react'
+import { Global, ThemeProvider } from '@emotion/react'
 
 import App from './App'
+import { globalStyle, globalTheme } from './styles/layouts/global'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <RecoilRoot>
-    <Global
-      styles={css`
-        ${emotionReset}
-
-        *, *::after, *::before {
-          box-sizing: border-box;
-          -moz-osx-font-smoothing: grayscale;
-          -webkit-font-smoothing: antialiased;
-          font-smoothing: antialiased;
-        }
-      `}
-    />
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </RecoilRoot>
+  <ThemeProvider theme={globalTheme}>
+    <RecoilRoot>
+      <Global styles={globalStyle} />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </RecoilRoot>
+  </ThemeProvider>
 )
