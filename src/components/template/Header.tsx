@@ -10,7 +10,7 @@ import {
 } from '../../styles/layouts/header'
 
 export const Header: FC = memo(() => {
-  // TODO: hooks化 useDiscloser
+  // TODO: useDisclosureを使おう
   const [isOpen, setIsOpen] = useState(false)
 
   const onClickOpenMenu = useCallback(() => setIsOpen(!isOpen), [isOpen])
