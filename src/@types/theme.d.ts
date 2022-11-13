@@ -13,7 +13,10 @@ declare module '@emotion/react' {
       secondaryColor: string
     }
     margin: {
-      topToMobile: number
+      topMain: number
+    }
+    height: {
+      header: number
     }
   }
 }

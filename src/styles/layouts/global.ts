@@ -13,21 +13,17 @@ export const globalTheme: Theme = {
     secondaryColor: '',
   },
   margin: {
-    topToMobile: 22,
+    topMain: 22,
+  },
+  height: {
+    header: 70,
   },
 }
 
 // TODO: Googlefont適用
 export const globalStyle = css`
   ${emotionReset}
-  *, *::after, *::before: {
-    box-sizing: border-BsBox;
-    -moz-osx-font-smoothing: grayscaleBsBox;
-    -webkit-font-smoothing: antialiasedBsBox;
-    font-smoothing: antialiasedBsBox;
-  }
-  ,
-  html: {
+  html {
     font-family: 'IM FELL DW Pica';
   }
 `

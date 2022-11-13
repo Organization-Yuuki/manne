@@ -19,7 +19,7 @@ export const Header: FC = memo(() => {
     <header css={headerStyle}>
       <div>
         <h1 css={headerTitleStyle}>{CONST_DATA.APP_TITLE}</h1>
-        <div css={headerNavStyle}>
+        <nav css={headerNavStyle}>
           {/* TODO: PCメニュー */}
           <div
             css={openBtnStyle}
@@ -30,7 +30,7 @@ export const Header: FC = memo(() => {
             <span></span>
             <span></span>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
   )
