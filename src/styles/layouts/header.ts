@@ -16,8 +16,7 @@ export const headerStyle = ({ margin, height }: Theme): SerializedStyles =>
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      paddingLeft: '20px',
-      paddingRight: '20px',
+      padding: '0 20px 5px',
       boxSizing: 'border-box',
     },
   })
