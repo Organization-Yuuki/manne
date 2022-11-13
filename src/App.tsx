@@ -4,7 +4,7 @@ import { Outlet, Route, Routes } from 'react-router-dom'
 
 import { ErrorFallback } from './components/errors/ErrorFallback'
 import { Layout } from './pages/Layout'
-import { Auth } from './pages/auth'
+import { Auth } from './pages/Auth'
 import { ProductList } from './pages/ProductList'
 import { User } from './pages/User'
 import { ErrorPage } from './components/errors/ErrorPage'
