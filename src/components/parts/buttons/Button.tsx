@@ -1,5 +1,16 @@
 import { FC } from 'react'
+import { commonButtonStyle } from '../../../styles/buttons/common'
 
-export const Button: FC = () => {
-  return <div>Button</div>
+interface ButtonProps {
+  children: string
+  // childrenはプロパティ。stringはchildrenの型になる。
+  onClick: () => void
+}
+
+export const Button: FC<ButtonProps> = ({ children, onClick }) => {
+  return (
+    <button onClick={onClick} css={[commonButtonStyle({ soType: 'google' })]}>
+      {children}
+    </button>
+  )
 }
