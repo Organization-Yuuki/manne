@@ -21,11 +21,7 @@ const SocialStyleMap: { [k in SocialTypes]: CSSProperties } = {
   },
 }
 
-interface Props {
-  soType?: SocialTypes | ''
-}
-
-export const commonButtonStyle = ({ soType = '' }: Props): SerializedStyles =>
+export const commonButtonStyle = (soType?: SocialTypes): SerializedStyles =>
   css({
     display: 'flex',
     alignItems: 'center',
@@ -41,7 +37,7 @@ export const commonButtonStyle = ({ soType = '' }: Props): SerializedStyles =>
       fontWeight: 'bold',
       fontSize: '20px',
 
-      [`&_${soType}`]: {
+      [`&_${!isEmpty(soType) && !isNil(soType) ? soType : ''}`]: {
         ...(!isNil(soType) && !isEmpty(soType) ? SocialStyleMap[soType] : {}),
       },
     },
