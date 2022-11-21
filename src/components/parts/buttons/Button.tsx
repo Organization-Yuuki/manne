@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { FC } from 'react'
 import { commonButtonStyle } from '../../../styles/buttons/common'
 
@@ -9,7 +10,11 @@ interface ButtonProps {
 
 export const Button: FC<ButtonProps> = ({ children, onClick }) => {
   return (
-    <button onClick={onClick} css={[commonButtonStyle()]}>
+    <button
+      onClick={onClick}
+      css={[commonButtonStyle()]}
+      className={clsx('btn')}
+    >
       {children}
     </button>
   )

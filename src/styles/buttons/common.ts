@@ -41,4 +41,15 @@ export const commonButtonStyle = (soType?: SocialTypes): SerializedStyles =>
         ...(!isNil(soType) && !isEmpty(soType) ? SocialStyleMap[soType] : {}),
       },
     },
+    '&.btn': {
+      backgroundColor: '#82DAAD',
+      color: '#fff',
+      fontWeight: 'bold',
+      fontSize: '20px',
+      border: '1px solid #000',
+      cursor: 'pointer',
+      '&:hover': {
+        opacity: 0.8,
+      },
+    },
   })
