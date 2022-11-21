@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react'
+import { isEmpty, isNil } from 'lodash'
 import { CSSProperties } from 'react'
 
 import { SocialTypes } from '../../@types'
@@ -21,10 +22,10 @@ const SocialStyleMap: { [k in SocialTypes]: CSSProperties } = {
 }
 
 interface Props {
-  soType: SocialTypes
+  soType?: SocialTypes | ''
 }
 
-export const commonButtonStyle = ({ soType }: Props): SerializedStyles =>
+export const commonButtonStyle = ({ soType = '' }: Props): SerializedStyles =>
   css({
     display: 'flex',
     alignItems: 'center',
@@ -41,7 +42,7 @@ export const commonButtonStyle = ({ soType }: Props): SerializedStyles =>
       fontSize: '20px',
 
       [`&_${soType}`]: {
-        ...SocialStyleMap[soType],
+        ...(!isNil(soType) && !isEmpty(soType) ? SocialStyleMap[soType] : {}),
       },
     },
   })
