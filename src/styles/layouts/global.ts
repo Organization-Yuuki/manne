@@ -24,6 +24,6 @@ export const globalTheme: Theme = {
 export const globalStyle = css`
   ${emotionReset}
   html {
-    font-family: 'IM FELL DW Pica';
+    font-family: '游ゴシック体‘, YuGothic, ‘游ゴシック’, ‘Yu Gothic’, sans-serif';
   }
 `

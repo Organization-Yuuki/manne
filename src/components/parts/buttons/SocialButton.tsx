@@ -34,7 +34,7 @@ const BeforeMemoSocialButton: FC<SocialButtonProps> = forwardRef<
   return (
     <button
       ref={ref}
-      css={[commonButtonStyle({ soType })]}
+      css={[commonButtonStyle(soType)]}
       className={clsx('so-btn', `so-btn_${soType}`, className)}
       {...props}
     >
