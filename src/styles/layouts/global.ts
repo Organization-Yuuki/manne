@@ -21,6 +21,7 @@ export const globalTheme: Theme = {
   },
   height: {
     header: 70,
+    footer: 70,
   },
 }
 
