@@ -1,6 +1,7 @@
 import clsx from 'clsx'
-import { FC, memo, useCallback, useState } from 'react'
+import { FC, memo } from 'react'
 
+import { useDiscloser } from '../../hooks/useDisclosur'
 import { CONST_DATA } from '../../const'
 import {
   headerNavStyle,
@@ -10,10 +11,7 @@ import {
 } from '../../styles/layouts/header'
 
 export const Header: FC = memo(() => {
-  // TODO: useDisclosureを使おう
-  const [isOpen, setIsOpen] = useState(false)
-
-  const onClickOpenMenu = useCallback(() => setIsOpen(!isOpen), [isOpen])
+  const { isOpen, handleToggle } = useDiscloser()
 
   return (
     <header css={headerStyle}>
@@ -24,7 +22,7 @@ export const Header: FC = memo(() => {
           <div
             css={openBtnStyle}
             className={clsx(isOpen && 'active')}
-            onClick={onClickOpenMenu}
+            onClick={handleToggle}
           >
             <span></span>
             <span></span>
