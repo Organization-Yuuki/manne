@@ -11,6 +11,10 @@ export const globalTheme: Theme = {
     },
     primaryColor: '#82DAAD',
     secondaryColor: '',
+    text: {
+      primary: '#000',
+      secondary: '#575756',
+    },
   },
   margin: {
     topMain: 22,

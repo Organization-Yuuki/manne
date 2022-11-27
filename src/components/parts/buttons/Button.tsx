@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import { FC } from 'react'
-
 import { commonButtonStyle } from '../../../styles/parts/button.style'
 
 interface ButtonProps {
