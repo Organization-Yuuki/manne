@@ -11,6 +11,10 @@ declare module '@emotion/react' {
       }
       primaryColor: string
       secondaryColor: string
+      text: {
+        primary: string
+        secondary: string
+      }
     }
     margin: {
       topMain: number
