@@ -17,6 +17,7 @@ declare module '@emotion/react' {
     }
     height: {
       header: number
+      footer: number
     }
   }
 }
