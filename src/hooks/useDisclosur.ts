@@ -7,6 +7,7 @@ interface ReturnProp {
   handleToggle: () => void
 }
 
+// TODO: 5. メモ化
 export const useDiscloser = (): ReturnProp => {
   // TODO: 1. isOpen stateを定義しよう
   const [isOpen, setIsOpen] = useState(false)
