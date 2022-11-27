@@ -4,7 +4,7 @@ import { BsFacebook, BsApple } from 'react-icons/bs'
 import { FcGoogle } from 'react-icons/fc'
 
 import { SocialTypes } from '../../../@types'
-import { commonButtonStyle } from '../../../styles/buttons/common'
+import { commonButtonStyle } from '../../../styles/parts/button.style'
 import { Spinner } from '../loadings/Spinner'
 
 interface SocialButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
