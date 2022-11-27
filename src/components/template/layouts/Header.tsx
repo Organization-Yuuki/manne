@@ -1,14 +1,14 @@
 import clsx from 'clsx'
 import { FC, memo } from 'react'
 
-import { useDiscloser } from '../../hooks/useDisclosur'
-import { CONST_DATA } from '../../const'
+import { useDiscloser } from '../../../hooks/useDisclosur'
+import { CONST_DATA } from '../../../const'
 import {
   headerNavStyle,
   headerStyle,
   headerTitleStyle,
   openBtnStyle,
-} from '../../styles/layouts/header'
+} from '../../../styles/layouts/header'
 
 export const Header: FC = memo(() => {
   const { isOpen, handleToggle } = useDiscloser()
