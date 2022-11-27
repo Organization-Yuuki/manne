@@ -1,14 +1,17 @@
 import React from 'react'
 
 import { CONST_DATA } from '../../../const'
-import { footerStyle, footerTitleStyle } from '../../../styles/layouts/footer'
+import {
+  footerCopyrightStyle,
+  footerStyle,
+  footerTitleStyle,
+} from '../../../styles/layouts/footer'
 
 export const Footer = () => {
   return (
     <footer css={footerStyle}>
-      <div>
-        <h1 css={footerTitleStyle}>{CONST_DATA.APP_TITLE}</h1>
-      </div>
+      <h1 css={footerTitleStyle}>{CONST_DATA.APP_TITLE}</h1>
+      <p css={footerCopyrightStyle}>&copy;manne inc.</p>
     </footer>
   )
 }
