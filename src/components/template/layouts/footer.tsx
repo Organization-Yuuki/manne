@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 
 import { CONST_DATA } from '../../../const'
 import {
@@ -7,7 +7,7 @@ import {
   footerTitleStyle,
 } from '../../../styles/layouts/footer'
 
-export const Footer = () => {
+export const Footer: FC = () => {
   return (
     <footer css={footerStyle}>
       <h1 css={footerTitleStyle}>{CONST_DATA.APP_TITLE}</h1>
