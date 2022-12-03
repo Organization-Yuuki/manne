@@ -27,7 +27,7 @@ export const productRowStyle = (img: string) => {
     textDecoration: 'none',
     border: `1px solid ${theme.colors.grey.primary}`,
     borderRadius: '10%',
-    
+
     '.product': {
       '&_img': {
         display: 'block',
@@ -42,13 +42,13 @@ export const productRowStyle = (img: string) => {
         '&_headding': {
           fontSize: '12px',
           color: 'black',
-          marginBottom: '10px'
+          marginBottom: '10px',
         },
         '&_text': {
           textAlign: 'right',
           color: theme.colors.text.secondary,
-        }
-      }
-    }
+        },
+      },
+    },
   })
 }
