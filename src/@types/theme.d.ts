@@ -14,6 +14,10 @@ declare module '@emotion/react' {
       text: {
         primary: string
         secondary: string
+        tertiary: string
+        quaternary: string
+        quinary: string
+        senary: string
       }
     }
     margin: {
