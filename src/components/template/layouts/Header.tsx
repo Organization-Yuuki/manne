@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { FC, memo } from 'react'
 
+// TODO: useDisclosure
 import { useDiscloser } from '../../../hooks/useDisclosur'
 import { CONST_DATA } from '../../../const'
 import {
@@ -11,6 +12,7 @@ import {
 } from '../../../styles/layouts/header'
 
 export const Header: FC = memo(() => {
+  // TODO: useDisclosure
   const { isOpen, handleToggle } = useDiscloser()
 
   return (
