@@ -32,7 +32,7 @@ export const productRowStyle = (img: string) => {
     '.product': {
       '&_img': {
         display: 'block',
-        background: img ? `url(${img})`: `url(${dummy})`,
+        background: img ? `url(${img})` : `url(${dummy})`,
         backgroundSize: 'cover',
         width: 'auto',
         height: '165px',
