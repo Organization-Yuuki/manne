@@ -1,4 +1,5 @@
 import { css, SerializedStyles, Theme, useTheme } from '@emotion/react'
+import dummy from '../../assets/images/dummy_img.svg'
 
 export const commonRowStyle = (theme: Theme): SerializedStyles =>
   css({
@@ -31,7 +32,7 @@ export const productRowStyle = (img: string) => {
     '.product': {
       '&_img': {
         display: 'block',
-        background: `url(${img})`,
+        background: img ? `url(${img})`: `url(${dummy})`,
         backgroundSize: 'cover',
         width: 'auto',
         height: '165px',
@@ -39,7 +40,7 @@ export const productRowStyle = (img: string) => {
       },
       '&_sentence': {
         padding: '10px 5px 30px',
-        '&_headding': {
+        '&_heading': {
           fontSize: '12px',
           color: 'black',
           marginBottom: '10px',

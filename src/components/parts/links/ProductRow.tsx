@@ -24,7 +24,7 @@ const BeforeMemoProductRow: FC<Props> = ({ product }) => {
     >
       <div className={clsx('product_img')}></div>
       <div className={clsx('product_sentence')}>
-        <h3 className={clsx('product_sentence_headding')}>{name}</h3>
+        <h3 className={clsx('product_sentence_heading')}>{name}</h3>
         <p className={clsx('product_sentence_text')}>¥{price}</p>
       </div>
     </RouterLink>
