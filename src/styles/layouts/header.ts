@@ -1,6 +1,6 @@
 import { css, SerializedStyles, Theme } from '@emotion/react'
 
-export const headerStyle = ({ margin, height }: Theme): SerializedStyles =>
+export const headerStyle = ({ height }: Theme): SerializedStyles =>
   css({
     display: 'flex',
     justifyContent: 'center',
@@ -20,10 +20,6 @@ export const headerStyle = ({ margin, height }: Theme): SerializedStyles =>
       boxSizing: 'border-box',
     },
   })
-
-export const headerTitleStyle = css({
-  fontSize: '25px',
-})
 
 export const headerNavStyle = css({
   display: 'flex',

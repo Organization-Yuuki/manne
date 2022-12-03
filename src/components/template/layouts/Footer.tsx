@@ -6,11 +6,14 @@ import {
   footerStyle,
   footerTitleStyle,
 } from '../../../styles/layouts/footer'
+import { Head } from '../../parts/texts/Head'
 
 export const Footer: FC = () => {
   return (
     <footer css={footerStyle}>
-      <h1 css={footerTitleStyle}>{CONST_DATA.APP_TITLE}</h1>
+      <Head level={2} css={footerTitleStyle}>
+        {CONST_DATA.APP_TITLE}
+      </Head>
       <p css={footerCopyrightStyle}>&copy;manne Inc.</p>
     </footer>
   )
