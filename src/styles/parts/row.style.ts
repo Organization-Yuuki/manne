@@ -1,4 +1,5 @@
 import { css, SerializedStyles, Theme, useTheme } from '@emotion/react'
+import isEmpty from 'lodash/isEmpty'
 import dummy from '../../assets/images/dummy_img.svg'
 
 export const commonRowStyle = (theme: Theme): SerializedStyles =>
@@ -19,7 +20,7 @@ export const commonRowStyle = (theme: Theme): SerializedStyles =>
     },
   })
 
-export const productRowStyle = (img: string) => {
+export const productRowStyle = (img = '') => {
   const theme = useTheme()
   return css({
     display: 'block',
@@ -32,7 +33,7 @@ export const productRowStyle = (img: string) => {
     '.product': {
       '&_img': {
         display: 'block',
-        background: img ? `url(${img})` : `url(${dummy})`,
+        background: !isEmpty(img) ? `url(${img})` : `url(${dummy})`,
         backgroundSize: 'cover',
         width: 'auto',
         height: '165px',
