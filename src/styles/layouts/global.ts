@@ -14,6 +14,10 @@ export const globalTheme: Theme = {
     text: {
       primary: '#000',
       secondary: '#575756',
+      tertiary: '#757575',
+      quaternary: '',
+      quinary: '',
+      senary: '',
     },
   },
   margin: {
@@ -30,5 +34,14 @@ export const globalStyle = css`
   ${emotionReset}
   html {
     font-family: '游ゴシック体‘, YuGothic, ‘游ゴシック’, ‘Yu Gothic’, sans-serif';
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h3 {
+    color: #757575;
+    font-size: 19px;
   }
 `

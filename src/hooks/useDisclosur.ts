@@ -8,6 +8,7 @@ interface ReturnProp {
 }
 
 // TODO: 5. メモ化
+// TODO: useDisclosure
 export const useDiscloser = (): ReturnProp => {
   // TODO: 1. isOpen stateを定義しよう
   const [isOpen, setIsOpen] = useState(false)

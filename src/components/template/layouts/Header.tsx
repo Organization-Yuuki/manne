@@ -1,22 +1,24 @@
 import clsx from 'clsx'
 import { FC, memo } from 'react'
 
-import { useDiscloser } from '../../../hooks/useDisclosur'
+import { Head } from '../../parts/texts/Head'
 import { CONST_DATA } from '../../../const'
+// TODO: useDisclosure
+import { useDiscloser } from '../../../hooks/useDisclosur'
 import {
   headerNavStyle,
   headerStyle,
-  headerTitleStyle,
   openBtnStyle,
 } from '../../../styles/layouts/header'
 
 export const Header: FC = memo(() => {
+  // TODO: useDisclosure
   const { isOpen, handleToggle } = useDiscloser()
 
   return (
     <header css={headerStyle}>
       <div>
-        <h1 css={headerTitleStyle}>{CONST_DATA.APP_TITLE}</h1>
+        <Head level={1}>{CONST_DATA.APP_TITLE}</Head>
         <nav css={headerNavStyle}>
           {/* TODO: PCメニュー */}
           <div
