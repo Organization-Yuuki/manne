@@ -11,6 +11,7 @@ export interface Product {
 
 // 商品画像
 export interface ProductImage {
-  product_id: number
+  id: string
+  productId: number
   image_url: string
 }
