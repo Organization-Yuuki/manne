@@ -6,7 +6,7 @@ export interface Product {
   is_sold: boolean
   buy_user?: string
   content?: string
-  buyerId: string
+  sellerId: string
 }
 
 // 商品画像
