@@ -1,16 +1,17 @@
 // 商品
 export interface Product {
-  id: number
-  user_id: number
+  id: string
   title: string
-  price: string
+  price: number
   is_sold: boolean
-  buy_user?: number
+  buy_user?: string
   content?: string
+  sellerId: string
 }
 
 // 商品画像
 export interface ProductImage {
-  product_id: number
+  id: string
+  productId: number
   image_url: string
 }

@@ -1,5 +1,5 @@
-import { Product } from '../features/product'
-import { User } from '../features/user'
+import { Product } from '../entities/product'
+import { User } from '../entities/user'
 import { ApiError } from './error'
 
 /*

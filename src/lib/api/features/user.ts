@@ -1,5 +1,5 @@
 import { UserDetailResponse } from '../../../@types/api/response'
-import { User } from '../../../@types/features/user'
+import { User } from '../../../@types/entities/user'
 import { apiInstance } from '../axios'
 import { ERROR_CODES } from '../error'
 
@@ -20,7 +20,7 @@ export const fetchUserDetail = async ({
     // TODO: 条件分岐
     return {
       user: {
-        id: 0,
+        id: '',
         username: '',
         email: '',
         description: '',
