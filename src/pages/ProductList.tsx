@@ -4,6 +4,7 @@ import { CategoryRow } from '../components/parts/links/CategoryRow'
 import { ProductRow } from '../components/parts/links/ProductRow'
 import sample from '../assets/images/sample_icon.png'
 import wallet from '../assets/images/sample_wallet.png'
+import { LikeButton } from '../components/parts/buttons/LikeButton'
 
 export const ProductList: FC = () => {
   // ダミーデータ
@@ -21,6 +22,7 @@ export const ProductList: FC = () => {
         categoryName="カテゴリー名を挿入"
         imgUrl={sample}
       />
+      <LikeButton/>
       <ProductRow product={product} />
     </div>
   )
