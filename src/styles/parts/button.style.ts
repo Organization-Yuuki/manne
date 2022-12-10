@@ -59,6 +59,7 @@ export const likeButtonStyle = (): SerializedStyles =>
     borderRadius: '50%',
     width: '25px',
     height: '25px',
+    padding: '3px 3px 2px',
 
     '& > img': {
       width: '100%',
