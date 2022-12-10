@@ -6,6 +6,7 @@ import { MenuRow } from '../components/parts/links/MenuRow'
 import sample from '../assets/images/sample_icon.png'
 import wallet from '../assets/images/sample_wallet.png'
 import home from '../assets/images/sample_home.png'
+import { MenuList } from '../components/template/list/NavigateMenu'
 
 export const ProductList: FC = () => {
   // ダミーデータ
@@ -23,7 +24,7 @@ export const ProductList: FC = () => {
         categoryName="カテゴリー名を挿入"
         imgUrl={sample}
       />
-      <MenuRow url="" menuName="List" imgUrl={home} />
+      <MenuList />
       <ProductRow product={product} />
     </div>
   )
