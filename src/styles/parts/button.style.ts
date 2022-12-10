@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/react'
+import { css, SerializedStyles, Theme } from '@emotion/react'
 import { isEmpty, isNil } from 'lodash'
 import { CSSProperties } from 'react'
 
@@ -54,12 +54,14 @@ export const commonButtonStyle = (soType?: SocialTypes): SerializedStyles =>
     },
   })
 
-export const likeButtonStyle = (): SerializedStyles =>
+export const likeButtonStyle = (theme: Theme): SerializedStyles =>
   css({
     borderRadius: '50%',
+    border: `1px solid ${theme.colors.white}`,
     width: '25px',
     height: '25px',
     padding: '3px 3px 2px',
+    backgroundColor: 'transparent',
 
     '& > img': {
       width: '100%',

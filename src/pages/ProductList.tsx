@@ -26,7 +26,9 @@ export const ProductList: FC = () => {
         categoryName="カテゴリー名を挿入"
         imgUrl={sample}
       />
-      <LikeButton onClick={onCLickLikeButton} />
+      <div style={{ width: '200px', height: '200px', background: '#000' }}>
+        <LikeButton onClick={onCLickLikeButton} />
+      </div>
       <ProductRow product={product} />
     </div>
   )
