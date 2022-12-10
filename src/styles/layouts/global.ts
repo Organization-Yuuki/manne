@@ -5,6 +5,7 @@ export const globalTheme: Theme = {
   colors: {
     white: '#fff',
     black: '#000',
+    red: '#ff4040',
     grey: {
       primary: '#D9D9D9',
       secondary: '#8F8F8F',
