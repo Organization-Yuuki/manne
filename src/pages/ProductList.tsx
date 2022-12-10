@@ -15,6 +15,10 @@ export const ProductList: FC = () => {
     price: '3000',
   }
 
+  const onCLickLikeButton = () => {
+    console.log('LikeButtonがクリックされました！')
+  }
+
   return (
     <div>
       <CategoryRow
@@ -22,7 +26,7 @@ export const ProductList: FC = () => {
         categoryName="カテゴリー名を挿入"
         imgUrl={sample}
       />
-      <LikeButton/>
+      <LikeButton onClick={onCLickLikeButton} />
       <ProductRow product={product} />
     </div>
   )

@@ -53,3 +53,15 @@ export const commonButtonStyle = (soType?: SocialTypes): SerializedStyles =>
       },
     },
   })
+
+export const likeButtonStyle = (): SerializedStyles =>
+  css({
+    borderRadius: '50%',
+    width: '25px',
+    height: '25px',
+
+    '& > img': {
+      width: '100%',
+      height: '100%',
+    },
+  })
