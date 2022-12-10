@@ -27,8 +27,8 @@ export const ProductList: FC = () => {
         imgUrl={sample}
       />
       <div style={{ width: '200px', height: '200px', background: '#000' }}>
-        <LikeButton onClick={onCLickLikeButton} />
       </div>
+      <LikeButton onClick={onCLickLikeButton} />
       <ProductRow product={product} />
     </div>
   )
