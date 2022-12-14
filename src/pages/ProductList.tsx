@@ -2,7 +2,6 @@ import { FC } from 'react'
 
 import { CategoryRow } from '../components/parts/links/CategoryRow'
 import { ProductRow } from '../components/parts/links/ProductRow'
-import sample from '../assets/images/sample_icon.png'
 import wallet from '../assets/images/sample_wallet.png'
 import { MenuList } from '../components/template/list/NavigateMenu'
 
@@ -20,7 +19,7 @@ export const ProductList: FC = () => {
       <CategoryRow
         url="/auth"
         categoryName="カテゴリー名を挿入"
-        imgUrl={sample}
+        imgUrl={'../assets/images/sample_icon.png'}
       />
       <MenuList />
       <ProductRow product={product} />
