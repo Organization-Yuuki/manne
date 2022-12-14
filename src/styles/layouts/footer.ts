@@ -1,6 +1,6 @@
 import { css, SerializedStyles, Theme } from '@emotion/react'
 
-export const footerStyle = ({ height }: Theme): SerializedStyles =>
+export const footerStyle = ({ height, colors }: Theme): SerializedStyles =>
   css({
     display: 'flex',
     flexDirection: 'column',
@@ -10,7 +10,7 @@ export const footerStyle = ({ height }: Theme): SerializedStyles =>
     width: '100%',
     boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.25)',
     height: height.footer,
-    backgroundColor: '#82DAAD',
+    backgroundColor: colors.primaryColor,
     textAlign: 'center',
   })
 

@@ -1,51 +1,47 @@
 import { FC } from 'react'
+import { AiFillHome, AiOutlineShoppingCart } from 'react-icons/Ai'
+import { BiCategory, BiNotepad, BiStoreAlt } from 'react-icons/Bi'
 
 import { MenuProps, MenuRow } from '../../parts/links/MenuRow'
-import home from '../../../assets/images/sample_home.png'
-import category from '../../../assets/images/sample_category.png'
-import cart from '../../../assets/images/sample_shoppingCart.png'
-import tradingHistory from '../../../assets/images/sample_tradingHistory.png'
-import exhibit from '../../../assets/images/sample_exhibit.png'
-
-type Menu = MenuProps[]
+import { globalTheme } from '../../../styles/layouts/global'
 
 export const MenuList: FC = () => {
-  const Menus: Menu = [
+  const MENUS: MenuProps[] = [
     {
       url: 'https://~',
-      imgUrl: home,
+      icon: <AiFillHome color={globalTheme.colors.primaryColor} />,
       menuName: 'home',
     },
     {
       url: 'https://~',
-      imgUrl: category,
+      icon: <BiCategory color={globalTheme.colors.primaryColor} />,
       menuName: 'カテゴリー',
     },
     {
       url: 'https://~',
-      imgUrl: cart,
+      icon: <AiOutlineShoppingCart color={globalTheme.colors.primaryColor} />,
       menuName: 'カート',
     },
     {
       url: 'https://~',
-      imgUrl: tradingHistory,
+      icon: <BiNotepad color={globalTheme.colors.primaryColor} />,
       menuName: '取引履歴',
     },
     {
       url: 'https://~',
-      imgUrl: exhibit,
+      icon: <BiStoreAlt color={globalTheme.colors.primaryColor} />,
       menuName: '出品',
     },
   ]
 
   return (
     <>
-      {Menus.map((menu, index) => {
+      {MENUS.map((menu) => {
         return (
           <MenuRow
-            key={menu.menuName + String(index)}
+            key={menu.menuName}
             url={menu.url}
-            imgUrl={menu.imgUrl}
+            icon={menu.icon}
             menuName={menu.menuName}
           />
         )
