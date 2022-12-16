@@ -9,7 +9,8 @@
     "lint": "eslint --ext .ts,.tsx ./src",
     "fix": "npm run format && npm run lint:fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'"
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.10.0",
@@ -42,6 +43,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.10",
     "typescript": "^4.8.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vitest": "^0.25.8"
   }
 }
